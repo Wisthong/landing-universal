@@ -1,111 +1,148 @@
 <div class="container mx-auto">
-  <div class="grid grid-cols-6 gap-4">
-    <div class="col-start-1">
-      <img class="w-20" src="../../assets/image/logo.png" alt="" srcset="" />
+  <!-- <div class="grid grid-cols-6 gap-4">
+    <div class="sm:col-start-3  xl:col-start-1">
+      <img class="sm:w-20" src="../../assets/image/logo.png" alt="" srcset="" />
     </div>
-    <div class="col-end-8">
-      <img class="w-20" src="../../assets/image/logo.png" alt="" srcset="" />
+    <div class="sm:col-start-6 xl:col-star-8">
+      <img class="sm:w-20" src="/assets/image/logo.png" alt="" srcset="" />
     </div>
-  </div>
-  <h1 class="text-center text-5xl font-extrabold text-sky-600 py-4 uppercase">
+  </div> -->
+  <h1
+    class="text-center sm:text-3xl xl:text-7xl font-extrabold text-sky-600 py-4 uppercase"
+  >
     Universal <span class="" style="color: #fabc0b"> Distribuidora</span>
   </h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugit
-    fugiat odit ea natus soluta vel id inventore. Sequi ducimus impedit
-    mollitia! Asperiores ex cumque debitis aperiam nihil nobis nisi. Explicabo
-    et error nam nobis at molestiae quaerat ut a vitae eos. Reprehenderit a
-    ipsam enim? Quas quae veniam qui ex quos commodi eius repellat ullam
-    doloremque fugit! Accusamus, consequuntur. Neque perferendis voluptate,
-    saepe beatae fugit dignissimos veritatis commodi consequuntur, soluta
-    maiores quos tempora repellat suscipit, temporibus adipisci? Excepturi quos
-    fuga accusantium libero repellendus repellat expedita aut reiciendis iusto
-    dolores! Sit quidem totam repudiandae incidunt odit nostrum labore fugit
-    eligendi dicta facere. Est, praesentium in! Repudiandae facilis voluptatibus
-    molestias at alias, maiores perferendis, blanditiis necessitatibus dolorem
-    nulla nisi similique qui.
-  </p>
 
-  <div id="controls-carousel" class="relative w-full" data-carousel="static">
-    <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-      <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="../../assets/image/logo.png" class="w-full" alt="..." />
+  <!-- MISION Y VISION -->
+  <div class="grid sm:grid-cols-2 md:grid-cols-2 sm:gap-2 md:gap-4">
+    <div class="">
+      <h1
+        (click)="showDialogo()"
+        class="text-5xl text-center text-orange-500 py-4 cursor-pointer uppercase font-extrabold"
+      >
+        Nuestra misión
+      </h1>
+
+      <div class="card flex justify-content-center">
+        <!-- <p-button
+          (click)="showDialog()"
+          icon="pi pi-external-link"
+          label="Presionar"
+        ></p-button> -->
+        <p-dialog
+          header="Nuestra Mision"
+          [(visible)]="visibles"
+          [modal]="true"
+          [style]="{ width: '50vw' }"
+          [draggable]="true"
+          [resizable]="false"
+        >
+          <p class="m-0 text-justify">
+            Poner a disposición de nuestros clientes una oferta amplia y variada
+            en nuestras líneas especializadas, respaldada por la asesoría y
+            acompañamiento de nuestro equipo de servicio altamente capacitado
+            para brindar una experiencia memorable inspirada en los valores que
+            nos hacen una empresa unida, comprometida, alegre y trabajadora.
+          </p>
+          <div class="grid grid-cols-3">
+            <img
+              src="/assets/image/mision.png"
+              [alt]="'product.name'"
+              class="w-96 shadow-2 col-start-2 py-4"
+            />
+          </div>
+        </p-dialog>
       </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-        <img src="../../assets/image/logo.png" class="w-full" alt="..." />
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="../../assets/image/logo.png" class="w-full" alt="..." />
-      </div>
-      <!-- Item 4 -->
     </div>
-    <!-- Slider controls -->
-    <button
-      type="button"
-      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-prev
-    >
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+
+    <div class="">
+      <h1
+        (click)="showDialog()"
+        class="text-5xl text-center text-orange-500 py-4 cursor-pointer uppercase font-extrabold"
       >
-        <svg
-          class="w-4 h-4 text-white dark:text-gray-800"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
+        Nuestra visión
+      </h1>
+      <div class="card flex justify-content-center">
+        <p-dialog
+          header="Nuestra Vision"
+          [(visible)]="visible"
+          [modal]="true"
+          [style]="{ width: '50vw' }"
+          [draggable]="true"
+          [resizable]="false"
         >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 1 1 5l4 4"
-          />
-        </svg>
-        <span class="sr-only">Previous</span>
-      </span>
-    </button>
-    <button
-      type="button"
-      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-next
-    >
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-      >
-        <svg
-          class="w-4 h-4 text-white dark:text-gray-800"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m1 9 4-4-4-4"
-          />
-        </svg>
-        <span class="sr-only">Next</span>
-      </span>
-    </button>
+          <p class="m-0 text-justify">
+            Posicionarnos como una empresa líder en la comercialización de las
+            categorías de papelería, cosméticos y línea institucional,
+            convirtiéndonos en aliados de valor para nuestros clientes y sus
+            emprendimientos. Siendo reconocidos por nuestra estructura
+            empresarial sólida, innovadora, enfocada en el bienestar de nuestros
+            colaboradores y en generar impacto positivo en nuestro entorno.
+          </p>
+          <div class="grid grid-cols-3">
+            <img
+              src="/assets/image/vision.png"
+              [alt]="'product.name'"
+              class="w-96 shadow-2 col-start-2 py-4"
+            />
+          </div>
+        </p-dialog>
+      </div>
+    </div>
   </div>
 
-  <!-- <img
-    class="w-full h-96"
-    src="https://picsum.photos/700/500"
-    alt=""
-    srcset=""
-  /> -->
+  <!-- CAROUSEL -->
+  <div class="card">
+    <p-carousel
+      [value]="products"
+      [numVisible]="3"
+      [numScroll]="3"
+      [circular]="false"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-product pTemplate="item">
+        <div
+          class="border-1 surface-border border-round m-2 text-center py-5 px-3"
+        >
+          <div class="mb-3">
+            <img
+              src="/assets/image/logo.png"
+              [alt]="product.name"
+              class="w-full shadow-2"
+            />
+            <!-- <img
+              src="https://picsum.photos/700/500"
+              [alt]="product.name"
+              class="w-full shadow-2"
+            /> -->
+          </div>
+          <div>
+            <!-- <h4 class="mb-1">{{ product.name }}</h4> -->
+            <!-- <h6 class="mt-0 mb-3">{{ "$" + product.price }}</h6> -->
+            <p-tag
+              [value]="product.inventoryStatus"
+              [severity]="getSeverity(product.inventoryStatus)"
+            ></p-tag>
+            <!-- <div class="car-buttons mt-5">
+              <p-button
+                type="button"
+                styleClass="p-button p-button-rounded mr-2"
+                icon="pi pi-search"
+              ></p-button>
+              <p-button
+                type="button"
+                styleClass="p-button-success p-button-rounded mr-2"
+                icon="pi pi-star-fill"
+              ></p-button>
+            </div> -->
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
 
-  <div class="grid grid-cols-6 gap-2">
+  <!-- DIRECCIONAMIENTO A PORTALES -->
+  <div class="grid sm:grid-cols-2 md:grid-cols-6 md:gap-2">
     <a
       class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
       href="http://192.168.40.247/"
@@ -117,6 +154,12 @@
       href="http://192.168.40.47/asesor"
       target="_blank"
       >Portal Anuncios</a
+    >
+    <a
+      class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
+      href="http://192.168.40.47:9000/"
+      target="_blank"
+      >Portal Gestion de Clientes</a
     >
     <a
       class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
@@ -136,5 +179,375 @@
       target="_blank"
       >Portal Discord</a
     >
+  </div>
+
+  <h1
+    class="text-center text-5xl uppercase text-orange-500 font-extrabold my-8"
+  >
+    Extensiones
+  </h1>
+
+  <div class="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-2 my-8">
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 111
+      <label for="" class="text-orange-400 font-bold uppercase">CARTERA</label>
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 112
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >VENTASPAP4</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 113
+      <label for="" class="text-orange-400 font-bold uppercase">SURTIDOR</label>
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 115
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >BOD01LIDER</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 116
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >BODEGA COSMETICOS</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 117
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >VENTASPAP1</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 118
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >TESORERIA</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 120
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >VENTASPAP3</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 121
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CONTADORA</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 122
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >COSMETICOSPDV</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 123
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >TRANSFERENCIAS</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 124
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CACHARROPDV</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 130
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CACHARROPDV2</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 168
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CALLCENT01</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 169
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CEDI-DESPACHOS</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 170
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CALLCENT02</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 171
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CALLCENT03</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 172
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CALLCENT04</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 173
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >Recurso_H</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 135
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CALLCENTER_CENTRO1</label
+      >
+    </span>
+    <span
+      class="text-xl hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
+      >Ext 176
+      <label for="" class="text-orange-400 font-bold uppercase"
+        >CALLCENTER_CENTRO2</label
+      >
+    </span>
+  </div>
+
+  <h1
+    class="text-center text-5xl uppercase text-orange-500 font-extrabold my-8"
+  >
+    Correos electronicos
+  </h1>
+  <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      contabilidad@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">alba valencia</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      sistemas@distribuidorauniversacali.com
+      <span class="text-neutral-900 font-bold uppercase">christian ruiz</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      asist.contable@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">natalia duque</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      inventario@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">jamer muñoz</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      admin.item@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase"
+        >jhonatan villegas</span
+      >
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      compras2@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">kelly ruiz</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      compras3@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">sebastian hoyos</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      compras4@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">edinson suarez</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      compras5@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">eliana barrera</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      logistica@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase"
+        >francisco fernandez</span
+      >
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      gerencia@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">clarita</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      factura@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">entrante</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      sst@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">camila morales</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      costos@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">juan castrillon</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      tesoreria@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase"
+        >jessica cifuentes</span
+      >
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      cartera@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">diana</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      admon@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">andrea martinez</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      pdv14pasoancho@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">14</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      liderla14@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">gloria mora</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      marketing@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">daniela martinez</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      901160842@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">electronica</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      devoluciones@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">gerson fernandez</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      pdvsexta@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">erika pineda</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      mercadeo@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">ricardo zambrano</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      publicidad@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">lina montenegro</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      posuniversal@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">contabilidad</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      admoncentro@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">nelsy villota</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      liderpdvcentro@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">amparo restrepo</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      asesor@distribuidorauniversalcali.com
+      <span class="text-neutral-900 font-bold uppercase">jennifer caviche</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      externo1pud@gmail.com
+      <span class="text-neutral-900 font-bold uppercase">wilson aguirre</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      externo2pud@gmail.com
+      <span class="text-neutral-900 font-bold uppercase">milton grisalez</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      asesor2pudoutlook.com
+      <span class="text-neutral-900 font-bold uppercase">yanella klinger</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      asesor4pud@outlook.com
+      <span class="text-neutral-900 font-bold uppercase">martha borja</span>
+    </p>
+    <p
+      class="text-blue-600 hover:text-blue-800 sm:text-xs md:text-base xl:text-xl"
+    >
+      asesor5pud@outlook.com
+      <span class="text-neutral-900 font-bold uppercase">cony lugo</span>
+    </p>
   </div>
 </div>

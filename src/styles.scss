@@ -5,10 +5,20 @@
 @tailwind components;
 @tailwind utilities;
 
+// PRIMENG
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
 // FONTS
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Roboto:wght@300&display=swap");
 
 html,
 body {
   font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Libre Franklin", sans-serif;
 }
