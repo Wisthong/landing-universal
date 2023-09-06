@@ -1,486 +1,340 @@
-<div class="container mx-auto">
-  <!-- <div class="grid grid-cols-6 gap-4">
-    <div class="sm:col-start-3  xl:col-start-1">
-      <img class="sm:w-20" src="../../assets/image/logo.png" alt="" srcset="" />
-    </div>
-    <div class="sm:col-start-6 xl:col-star-8">
-      <img class="sm:w-20" src="/assets/image/logo.png" alt="" srcset="" />
-    </div>
-  </div> -->
-  <h1
-    class="text-center text-3xl md:text-5xl xl:text-7xl font-extrabold text-sky-600 py-4 uppercase"
-  >
-    Universal <span class="" style="color: #fabc0b"> Distribuidora</span>
-  </h1>
-
-  <!-- MISION Y VISION -->
-  <div class="grid sm:grid-cols-2 md:grid-cols-2 sm:gap-2 md:gap-4">
-    <div class="">
-      <h1
-        (click)="showDialogo()"
-        class="text-3xl md:text-5xl text-center text-orange-500 py-4 cursor-pointer uppercase font-extrabold"
-      >
-        Nuestra misión
-      </h1>
-
-      <div class="card flex justify-content-center">
-        <!-- <p-button
-          (click)="showDialog()"
-          icon="pi pi-external-link"
-          label="Presionar"
-        ></p-button> -->
-        <p-dialog
-          header="Nuestra Mision"
-          [(visible)]="visibles"
-          [modal]="true"
-          [style]="{ width: '50vw' }"
-          [draggable]="true"
-          [resizable]="false"
-        >
-          <p class="m-0 text-justify">
-            Poner a disposición de nuestros clientes una oferta amplia y variada
-            en nuestras líneas especializadas, respaldada por la asesoría y
-            acompañamiento de nuestro equipo de servicio altamente capacitado
-            para brindar una experiencia memorable inspirada en los valores que
-            nos hacen una empresa unida, comprometida, alegre y trabajadora.
-          </p>
-          <div class="grid grid-cols-3">
-            <img
-              src="/assets/image/mision.png"
-              [alt]="'product.name'"
-              class="w-96 shadow-2 col-start-2 py-4"
-            />
-          </div>
-        </p-dialog>
-      </div>
-    </div>
-
-    <div class="">
-      <h1
-        (click)="showDialog()"
-        class="text-3xl md:text-5xl text-center text-orange-500 py-4 cursor-pointer uppercase font-extrabold"
-      >
-        Nuestra visión
-      </h1>
-      <div class="card flex justify-content-center">
-        <p-dialog
-          header="Nuestra Vision"
-          [(visible)]="visible"
-          [modal]="true"
-          [style]="{ width: '50vw' }"
-          [draggable]="true"
-          [resizable]="false"
-        >
-          <p class="m-0 text-justify">
-            Posicionarnos como una empresa líder en la comercialización de las
-            categorías de papelería, cosméticos y línea institucional,
-            convirtiéndonos en aliados de valor para nuestros clientes y sus
-            emprendimientos. Siendo reconocidos por nuestra estructura
-            empresarial sólida, innovadora, enfocada en el bienestar de nuestros
-            colaboradores y en generar impacto positivo en nuestro entorno.
-          </p>
-          <div class="grid grid-cols-3">
-            <img
-              src="/assets/image/vision.png"
-              [alt]="'product.name'"
-              class="w-96 shadow-2 col-start-2 py-4"
-            />
-          </div>
-        </p-dialog>
+<!-- MISION Y VISION -->
+<div
+  class="grid grid-cols-2 bg-[url('/assets/image/FONDOS/FONDO_1.png')] min-h-full"
+>
+  <div class="col-span-2">
+    <div class="grid grid-cols-3">
+      <div class="col-start-2">
+        <img
+          class="w-60 mx-auto bg-white rounded-b-2xl px-8 py-4"
+          src="/assets/image/Logos/logo.png"
+          alt="logo_universal"
+          srcset=""
+        />
       </div>
     </div>
   </div>
-
-  <!-- CAROUSEL -->
-  <div class="card">
-    <p-carousel
-      [value]="products"
-      [numVisible]="3"
-      [numScroll]="3"
-      [circular]="false"
-      [responsiveOptions]="responsiveOptions"
-    >
-      <ng-template let-product pTemplate="item">
-        <div
-          class="border-1 surface-border border-round m-2 text-center py-5 px-3"
-        >
-          <div class="mb-3 text-center items-center content-center">
-            <p>lorem</p>
-            <img
-              [src]="product.imagen"
-              [alt]="product.name"
-              class="w-96 h-96 shadow-2xl text-center items-center content-center"
-            />
-            <!-- <img
-              src="https://picsum.photos/700/500"
-              [alt]="product.name"
-              class="w-full shadow-2"
-            /> -->
-          </div>
-          <div>
-            <!-- <h4 class="mb-1">{{ product.name }}</h4> -->
-            <!-- <h6 class="mt-0 mb-3">{{ "$" + product.price }}</h6> -->
-            <p-tag
-              [value]="product.inventoryStatus"
-              [severity]="getSeverity(product.inventoryStatus)"
-            ></p-tag>
-            <!-- <div class="car-buttons mt-5">
-              <p-button
-                type="button"
-                styleClass="p-button p-button-rounded mr-2"
-                icon="pi pi-search"
-              ></p-button>
-              <p-button
-                type="button"
-                styleClass="p-button-success p-button-rounded mr-2"
-                icon="pi pi-star-fill"
-              ></p-button>
-            </div> -->
-          </div>
-        </div>
-      </ng-template>
-    </p-carousel>
+  <!-- IMAGEN -->
+  <div class="mt-8">
+    <img src="/assets/image/7744160.png" alt="" srcset="" />
   </div>
 
-  <!-- DIRECCIONAMIENTO A PORTALES -->
-  <div class="grid grid-cols-3 md:grid-cols-4 mx-2 md:mx-0">
-    <a
-      class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
-      href="http://192.168.40.247/"
-      target="_blank"
-      >Portal Sicodes</a
-    >
-    <a
-      class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
-      href="http://192.168.40.47/asesor"
-      target="_blank"
-      >Portal Anuncios</a
-    >
-    <a
-      class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
-      href="http://192.168.40.47:9000/"
-      target="_blank"
-      >Portal Gestion de Clientes</a
-    >
-    <a
-      class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
-      href="https://app-inventario-universal.web.app/home/lista"
-      target="_blank"
-      >Portal Inventario</a
-    >
-    <a
-      class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
-      href="https://web.zenvia.com/zenvia-conversion/login"
-      target="_blank"
-      >Portal Sirena</a
-    >
-    <a
-      class="text-base text-blue-600 hover:text-blue-800 hover:text-xl underline"
-      href="https://discord.gg/sgexFE2t"
-      target="_blank"
-      >Portal Discord</a
-    >
-  </div>
+  <div class="mt-40">
+    <h1 class="text-7xl text-title">Misión</h1>
+    <p>
+      Poner a disposición de nuestros clientes una oferta amplia y variada en
+      nuestras líneas especializadas, respaldada por la asesoría y
+      acompañamiento de nuestro equipo de servicio altamente capacitado para
+      brindar una experiencia memorable inspirada en los valores que nos hacen
+      una empresa unida, comprometida, alegre y trabajadora.
+    </p>
 
-  <h1
-    class="text-center text-3xl md:text-5xl uppercase text-orange-500 font-extrabold my-8"
-  >
-    Extensiones
-  </h1>
-
-  <div class="grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-2 mx-2">
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 111
-      <label for="" class="text-orange-400 font-bold uppercase">CARTERA</label>
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 112
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >VENTASPAP4</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 113
-      <label for="" class="text-orange-400 font-bold uppercase">SURTIDOR</label>
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 115
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >BOD01LIDER</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 116
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >BODEGA COSMETICOS</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 117
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >VENTASPAP1</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 118
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >TESORERIA</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 120
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >VENTASPAP3</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 121
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CONTADORA</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 122
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >COSMETICOSPDV</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 123
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >TRANSFERENCIAS</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 124
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CACHARROPDV</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 130
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CACHARROPDV2</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 168
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CALLCENT01</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 169
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CEDI-DESPACHOS</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 170
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CALLCENT02</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 171
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CALLCENT03</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 172
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CALLCENT04</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 173
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >Recurso_H</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 135
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CALLCENTER_CENTRO1</label
-      >
-    </span>
-    <span
-      class="text-xs hover:text-2xl hover:text-cyan-400 sm:text-xs md:text-base xl:text-lg"
-      >Ext 176
-      <label for="" class="text-orange-400 font-bold uppercase"
-        >CALLCENTER_CENTRO2</label
-      >
-    </span>
-  </div>
-
-  <h1
-    class="text-center text-3xl md:text-5xl uppercase text-orange-500 font-extrabold my-8"
-  >
-    Correos electronicos
-  </h1>
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-2 md:mx-0">
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      contabilidad@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">alba valencia</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      sistemas@distribuidorauniversacali.com
-      <span class="text-neutral-900 font-bold uppercase">christian ruiz</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      asist.contable@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">natalia duque</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      inventario@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">jamer muñoz</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      admin.item@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase"
-        >jhonatan villegas</span
-      >
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      compras2@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">kelly ruiz</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      compras3@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">sebastian hoyos</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      compras4@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">edinson suarez</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      compras5@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">eliana barrera</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      logistica@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase"
-        >francisco fernandez</span
-      >
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      gerencia@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">clarita</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      factura@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">entrante</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      sst@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">camila morales</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      costos@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">juan castrillon</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      tesoreria@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase"
-        >jessica cifuentes</span
-      >
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      cartera@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">diana</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      admon@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">andrea martinez</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      pdv14pasoancho@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">14</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      liderla14@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">gloria mora</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      marketing@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">daniela martinez</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      901160842@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">electronica</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      devoluciones@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">gerson fernandez</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      pdvsexta@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">erika pineda</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      mercadeo@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">ricardo zambrano</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      publicidad@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">lina montenegro</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      posuniversal@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">contabilidad</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      admoncentro@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">nelsy villota</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      liderpdvcentro@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">amparo restrepo</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      asesor@distribuidorauniversalcali.com
-      <span class="text-neutral-900 font-bold uppercase">jennifer caviche</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      externo1pud@gmail.com
-      <span class="text-neutral-900 font-bold uppercase">wilson aguirre</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      externo2pud@gmail.com
-      <span class="text-neutral-900 font-bold uppercase">milton grisalez</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      asesor2pudoutlook.com
-      <span class="text-neutral-900 font-bold uppercase">yanella klinger</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      asesor4pud@outlook.com
-      <span class="text-neutral-900 font-bold uppercase">martha borja</span>
-    </p>
-    <p class="text-blue-600 hover:text-blue-800 text-xs md:text-base">
-      asesor5pud@outlook.com
-      <span class="text-neutral-900 font-bold uppercase">cony lugo</span>
+    <h1 class="text-7xl text-title">Visión</h1>
+    <p>
+      Posicionarnos como una empresa líder en la comercialización de las
+      categorías de papelería, cosméticos y línea institucional, convirtiéndonos
+      en aliados de valor para nuestros clientes y sus emprendimientos. Siendo
+      reconocidos por nuestra estructura empresarial sólida, innovadora,
+      enfocada en el bienestar de nuestros colaboradores y en generar impacto
+      positivo en nuestro entorno.
     </p>
   </div>
+</div>
+
+<!-- DIRECCIONAMIENTOS -->
+<div class="grid grid-cols-7 bg-title">
+  <a href="http://192.168.40.247/" target="_blank">
+    <img src="/assets/image/ICONOS/SICODES.png" alt="" srcset="" />
+  </a>
+  <a href="http://192.168.40.247/" target="_blank">
+    <img src="/assets/image/ICONOS/SIRENA.png" alt="" srcset="" />
+  </a>
+  <a href="http://192.168.40.247/" target="_blank">
+    <img src="/assets/image/ICONOS/DISCORD.png" alt="" srcset="" />
+  </a>
+  <a href="http://192.168.40.247/" target="_blank">
+    <img src="/assets/image/ICONOS/CLIENTES.png" alt="" srcset="" />
+  </a>
+  <a href="http://192.168.40.247/" target="_blank">
+    <img src="/assets/image/ICONOS/ANUNCIOS.png" alt="" srcset="" />
+  </a>
+  <a href="http://192.168.40.247/" target="_blank">
+    <img src="/assets/image/ICONOS/INVENTARIO.png" alt="" srcset="" />
+  </a>
+  <a href="http://192.168.40.247/" target="_blank">
+    <img src="/assets/image/ICONOS/VENTAS.png" alt="" srcset="" />
+  </a>
+</div>
+
+<!-- EXTENSIONES Y CORREOS -->
+<div class="grid grid-cols-1 mx-20 my-4">
+  <!-- EXTENSIONES -->
+  <div class="bg-rosado my-12 rounded-xl shadow-xl">
+    <h1 class="text-7xl text-title mx-8 my-6">EXTENSIONES</h1>
+    <div class="grid grid-cols-4 mx-8 mt-0 mb-8">
+      <p class="text-title">
+        Ext 111 <span class="font-roboto font-bold">CARTERA</span>
+      </p>
+      <p class="text-title">
+        Ext 112 <span class="font-roboto font-bold">VENTASPAP4</span>
+      </p>
+      <p class="text-title">
+        Ext 113 <span class="font-roboto font-bold">SURTIDOR</span>
+      </p>
+      <p class="text-title">
+        Ext 115 <span class="font-roboto font-bold">BOD01LIDER</span>
+      </p>
+      <p class="text-title">
+        Ext 116 <span class="font-roboto font-bold">BODEGA COSMETICOS</span>
+      </p>
+      <p class="text-title">
+        Ext 117 <span class="font-roboto font-bold">VENTASPAP1</span>
+      </p>
+      <p class="text-title">
+        Ext 118 <span class="font-roboto font-bold">TESORERIA</span>
+      </p>
+      <p class="text-title">
+        Ext 120 <span class="font-roboto font-bold">VENTASPAP3</span>
+      </p>
+      <p class="text-title">
+        Ext 121 <span class="font-roboto font-bold">CONTADORA</span>
+      </p>
+      <p class="text-title">
+        Ext 122 <span class="font-roboto font-bold">COSMETICOSPDV</span>
+      </p>
+      <p class="text-title">
+        Ext 123 <span class="font-roboto font-bold">TRANSFERENCIAS</span>
+      </p>
+      <p class="text-title">
+        Ext 124 <span class="font-roboto font-bold">CACHARROPDV</span>
+      </p>
+      <p class="text-title">
+        Ext 130 <span class="font-roboto font-bold">CACHARROPDV2</span>
+      </p>
+      <p class="text-title">
+        Ext 168 <span class="font-roboto font-bold">CALLCENT01</span>
+      </p>
+      <p class="text-title">
+        Ext 169 <span class="font-roboto font-bold">CEDI DESPACHOS</span>
+      </p>
+      <p class="text-title">
+        Ext 170 <span class="font-roboto font-bold">CALLCENT02</span>
+      </p>
+      <p class="text-title">
+        Ext 171 <span class="font-roboto font-bold">CALLCENT03</span>
+      </p>
+      <p class="text-title">
+        Ext 172 <span class="font-roboto font-bold">CALLCENT04</span>
+      </p>
+      <p class="text-title">
+        Ext 173 <span class="font-roboto font-bold">RECURSO_H</span>
+      </p>
+      <p class="text-title">
+        Ext 135 <span class="font-roboto font-bold">CALLCENTER_CENTRO1</span>
+      </p>
+      <p class="text-title">
+        Ext 176 <span class="font-roboto font-bold">CALLCENTER_CENTRO2</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- CORREOS INSTITUCIONALES-->
+  <div class="bg-azulclarito rounded-xl shadow-xl">
+    <h1 class="text-7xl text-title mx-8 my-6">CORREO INSTITUCIONAL</h1>
+    <div
+      class="grid grid-cols-3 divide-x-2 divide-title mx-8 mt-0 mb-8 gap-x-10"
+    >
+      <p class="font-roboto font-bold">
+        ALBA VALENCIA:
+        <span class="font-normal">
+          contabilidad@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        CHRISTIAN RUIZ:
+        <span class="font-normal">
+          sistemas@distribuidorauniversacali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        NATALIA DUQUE:
+        <span class="font-normal">
+          asist.contable@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        JAMER MUÑOZ:
+        <span class="font-normal">
+          inventario@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        JHONATAN VILLEGAS:
+        <span class="font-normal">
+          admin.item@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        KELLY RUIZ:
+        <span class="font-normal">
+          compras2@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        SEBASTIAN HOYOS:
+        <span class="font-normal">
+          compras3@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        EDINSON SUAREZ:
+        <span class="font-normal">
+          compras4@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        ELIANA BARRERA:
+        <span class="font-normal">
+          compras5@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        FRANCISCO FERNANDEZ:
+        <span class="font-normal">
+          logistica@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        CLARITA:
+        <span class="font-normal">
+          gerencia@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        ENTRANTE:
+        <span class="font-normal">
+          factura@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        CAMILA MORALES:
+        <span class="font-normal"> sst@distribuidorauniversalcali.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        JUAN CASTRILLON:
+        <span class="font-normal"> costos@distribuidorauniversalcali.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        JESSICA CIFUENTES:
+        <span class="font-normal">
+          tesoreria@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        DIANA:
+        <span class="font-normal">
+          cartera@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        ANDREA MARTINEZ:
+        <span class="font-normal"> admon@distribuidorauniversalcali.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        PASOANCHO:
+        <span class="font-normal">
+          pdv14pasoancho@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        GLORIA MORA:
+        <span class="font-normal">
+          liderla14@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        DANIELA MARTINEZ:
+        <span class="font-normal">
+          marketing@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        ELECTRÓNICA:
+        <span class="font-normal">
+          901160842@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        GERSON FERNANDEZ:
+        <span class="font-normal">
+          devoluciones@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        ERIKA PINEDA:
+        <span class="font-normal">
+          pdvsexta@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        RICARDO ZAMBRANO:
+        <span class="font-normal">
+          mercadeo@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        LINA MONTENEGRO:
+        <span class="font-normal">
+          publicidad@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        CONTABILIDAD:
+        <span class="font-normal">
+          posuniversal@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        NELSY VILLOTA:
+        <span class="font-normal">
+          admoncentro@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        AMPARO RESTREPO:
+        <span class="font-normal">
+          liderpdvcentro@distribuidorauniversalcali.com
+        </span>
+      </p>
+      <p class="font-roboto font-bold">
+        JENNIFER CAVICHE:
+        <span class="font-normal"> asesor@distribuidorauniversalcali.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        WILSON AGUIRRE: <span class="font-normal"> externo1pud@gmail.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        MILTON GRISALEZ:
+        <span class="font-normal"> externo2pud@gmail.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        YANELLA KLINGER:
+        <span class="font-normal"> asesor2pudoutlook.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        MARTHA BORJA: <span class="font-normal"> asesor4pud@outlook.com </span>
+      </p>
+      <p class="font-roboto font-bold">
+        CONY LUGO: <span class="font-normal"> asesor5pud@outlook.com </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="grid grid-cols-2 my-4">
+  <p class="text-center text-title font-passion">
+    © 2023 Desarrollador: Wisthong David Martinez Castro
+  </p>
+  <p class="text-center text-title font-passion">© 2023 Diseño: Luis Rojas</p>
 </div>
