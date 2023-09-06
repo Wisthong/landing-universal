@@ -27,15 +27,13 @@ export default class HomeComponent {
   products = [
     {
       imagen:
-        'https://media.licdn.com/dms/image/C561BAQFuDa7bnTijFg/company-background_10000/0/1608825903661?e=1693944000&v=beta&t=mj-ETKU8X7hYIEcmyPEFdBRozN9m01_GOU1AI78l0jU',
-        name: 'David',
-        lastname: 'Martinez',
-      },
-      {
-        imagen:
-          'https://media.licdn.com/dms/image/C561BAQFuDa7bnTijFg/company-background_10000/0/1608825903661?e=1693944000&v=beta&t=mj-ETKU8X7hYIEcmyPEFdBRozN9m01_GOU1AI78l0jU',
-      name: 'Jessica',
-      lastname: 'Vivas',
+        'https://media.istockphoto.com/id/1256476283/es/foto/de-una-visi%C3%B3n-a-una-misi%C3%B3n-la-mano-gira-los-dados-y-cambia-la-palabra-visi%C3%B3n-a-misi%C3%B3n.jpg?s=612x612&w=0&k=20&c=Fi--U8StvnPvhPCBouS6ugEsVtx1WmIDgasy60sqg94=',
+      name: 'mision',
+    },
+    {
+      imagen:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZHM0VZi8vuJFTX-WvXRYFbx7-vnGBXcCT9A',
+      name: 'vision',
     },
   ];
 
