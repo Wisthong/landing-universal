@@ -12,6 +12,9 @@ module.exports = {
         rosado: "#FFD1BD",
         azulclarito: "#B6EEFF",
       },
+      fontSize: {
+        sm: ["0.65rem", "0.75rem"],
+      },
     },
   },
   plugins: [],
