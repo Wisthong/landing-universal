@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import HomeComponent from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'home',
-  },
-  {
-    path: 'home',
-    loadComponent() {
-      return import('./home/home.component');
-    },
+    component: HomeComponent,
     title: 'Landing page',
+  },
+  // {
+  //   path: 'home',
+  //   loadComponent() {
+  //     return import('./home/home.component');
+  //   },
+  // },
+  {
+    path: '**',
+    component: HomeComponent,
+    title: 'Redirige ...',
   },
 ];
 

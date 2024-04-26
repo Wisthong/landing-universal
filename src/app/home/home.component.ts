@@ -5,19 +5,29 @@ import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { DialogModule } from 'primeng/dialog';
 import { TagModule } from 'primeng/tag';
+import { FooterComponent } from '../footer/footer.component';
+import { CuerpoComponent } from '../cuerpo/cuerpo.component';
+import { BotonesComponent } from '../botones/botones.component';
+import { HeaderComponent } from '../header/header.component';
+import { SliderComponent } from '../slider/slider.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
   imports: [
     CommonModule,
     ButtonModule,
     CarouselModule,
     DialogModule,
     TagModule,
+    FooterComponent,
+    CuerpoComponent,
+    BotonesComponent,
+    HeaderComponent,
+    SliderComponent,
   ],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
 })
 export default class HomeComponent {
   // products: Product[] | undefined;

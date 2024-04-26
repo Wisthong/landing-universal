@@ -1,0 +1,26 @@
+
+
+<!-- [containerStyle]="{ 'max-width': '640px' }" -->
+<div class="card py-12 bg-white">
+
+  <p-galleria
+    [autoPlay]="true"
+    [value]="images"
+    [responsiveOptions]="responsiveOptions"
+    [numVisible]="5"
+  >
+    <ng-template pTemplate="item" let-item>
+      <img class="w-1/2 rounded-2xl" [src]="item.itemImageSrc" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+      <div class="grid grid-nogutter justify-content-center">
+        <img [src]="item.thumbnailImageSrc" style="display: block" />
+      </div>
+    </ng-template>
+    <ng-template pTemplate="caption" let-item>
+      <h4 class="text-center" style="margin-bottom: 0.5rem; color: #ffffff">{{ item.title }}</h4>
+      <p class="text-center">{{ item.alt }}</p>
+    </ng-template>
+  </p-galleria>
+</div>
+
