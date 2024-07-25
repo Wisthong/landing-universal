@@ -3,7 +3,7 @@
 <h1
   class="pt-6 text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl text-title text-center font-passion"
 >
-  Producos nuevos
+  Productos nuevos
 </h1>
 <div class="my-0">
   <p-carousel
@@ -20,21 +20,19 @@
     <ng-template let-product pTemplate="item">
       <!-- <div class="border-2 surface-border border-round m-2 p-3"> -->
       <div class="m-2 p-3">
-        <div class="mb-3">
-          <div class="flex justify-center">
-            <!-- <p class="text-violet-600">{{ "hola mundo" }}</p>
+        <div class="mb-3 flex justify-center">
+          <!-- <p class="text-violet-600">{{ "hola mundo" }}</p>
                  <p class="text-violet-600">{{ product | json }}</p> -->
-            <a
-              target="_blank"
-              [href]="'http://192.168.40.47:4202/home/articulo/' + product._id"
-            >
-              <img
-                [src]="product.imagenRelacional.url"
-                [alt]="'imagen'"
-                class="object-contain w-32 h-32 md:w-52 md:h-32 rounded-xl cursor-pointer"
-              />
-            </a>
-          </div>
+          <a
+            target="_blank"
+            [href]="'http://192.168.40.47:4202/home/articulo/' + product._id"
+          >
+            <img
+              [src]="product.imagenRelacional.url"
+              [alt]="'imagen'"
+              class="object-fill size-32 lg:size-36 rounded-xl cursor-pointer"
+            />
+          </a>
         </div>
         <div
           class="mb-3 font-semibold text-blue-950 dark:text-blue-700 text-center"
