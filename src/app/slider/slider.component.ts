@@ -28,7 +28,7 @@ export class SliderComponent {
   ngOnInit() {
     const observer2$ = this.posterSvc.getAlll().subscribe(
       (resOk) => {
-        this.listPost = resOk.reverse().slice(0, 8);
+        this.listPost = resOk.reverse().slice(0, 10);
       },
       ({ error }: HttpErrorResponse) => {
         if (error.message !== undefined) {
